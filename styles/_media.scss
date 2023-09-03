@@ -1,0 +1,326 @@
+@media (max-width: 320px) {
+    @import 'mixins';
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .page {
+        width: 100vw;
+        padding-top: 0;
+        background: #110a1d;
+
+        &__dot-lights {
+            background: none;
+            background: url(../assets/main/dot-light-mobile-type-one.png) no-repeat, url(../assets/main/dot-light-mobile-type-two.png) no-repeat;
+            background-position: -50vw 3vh, -40vw 70vh;
+        }
+    }
+
+    .page-header {
+        flex-flow: column nowrap;
+        border: none;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        gap: 30px;
+        background-color: #110a1d;
+        border-radius: 0;
+        z-index: 11;
+    }
+
+    .container-headers {
+        display: none;
+        position: relative;
+        flex-flow: column nowrap;
+        gap: 5px;
+        width: 100%;
+
+        &__header {
+            @include font(18px, 24px);
+            border: $border-buttons;
+            border-radius: 28px;
+            padding: 13px 20px;
+            text-align: left;
+
+            &:hover {
+                background-color: #478bf9;
+            }
+        }
+
+        &_display-mobile {
+            display: flex;
+        }
+    }
+
+    .language {
+        position: relative;
+        order: -1;
+        width: 100%;
+        gap: 4px;
+        padding: 10px 14px;
+
+        &__union {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            margin-left: auto;
+            background: url(../assets/header/union-mobile.svg);
+            background-size: 100%;
+        }
+
+        &__menu {
+            @include menu-media;
+            background: url(../assets/header/menu.svg);
+        }
+
+        &__close {
+            @include menu-media;
+            background: url(../assets/header/close.svg);
+        }
+
+        &__text {
+            display: none;
+        }
+    }
+
+    .container-buttons-header {
+        display: none;
+        @include font(16px, 20px);
+        flex-flow: column nowrap;
+        position: relative;
+        width: 100%;
+        gap: 5px;
+        padding-bottom: 30px;
+
+        &__button {
+            text-align: center;
+        }
+
+        &_display-mobile {
+            display: flex;
+        }
+    }
+
+    .page-main {
+        flex-flow: column nowrap;
+        width: auto;
+        padding: 0 10px;
+        gap: 32px;
+        height: auto;
+        background: none;
+    }
+
+    .name-page {
+        &__header {
+            @include font(46px, 50px);
+            text-align: center;
+            margin-top: 136px;
+            padding-bottom: 12px;
+        }
+
+        &__info {
+            @include font(20px, 26px);
+            color: #a4a7b7;
+            text-align: center;
+        }
+
+        &__button {
+            @include font(18px);
+            border-radius: 48px;
+            box-sizing: border-box;
+            padding: 15px 20px;
+            margin-top: 24px;
+            width: 100%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .container-of-coins {
+        flex-flow: column-reverse nowrap;
+        transform: translate(0, 0);
+        gap: 8px;
+
+        &__position {
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .segment {
+        flex-flow: row nowrap;
+        gap: 8px;
+        position: relative;
+
+        &__first {
+            transform: translate(40px, 0);
+        }
+
+        &__even {
+            transform: translate(-121px, 0);
+        }
+
+        &_third {
+            transform: translate(-30px, 0);
+        }
+    }
+
+    .block {
+        flex-flow: row nowrap;
+        gap: 8px;
+
+        &__element-is-animation {
+            height: auto;
+            width: $height-container-animation * 0.5;
+            border-radius: 25px/50%;
+            border: $border-animation-mobile;
+        }
+
+        &__element {
+            width: $width-height-coin * 0.5;
+            height: $width-height-coin * 0.5;
+            background-size: cover;
+
+            &_animation-type-one {
+                top: 0;
+                left: $height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2;
+                animation: none;
+                @include animation-standart;
+                animation-name: animation-type-three;
+            }
+
+            &_animation-type-two {
+                animation: none;
+                left: 0;
+                @include animation-standart;
+                animation-name: animation-type-four;
+            }
+        }
+    }
+
+    .container-of-blogs {
+        width: 100%;
+        flex-grow: 0;
+
+        &__header {
+            @include font(32px, 40px);
+            margin: 0 auto 18px;
+        }
+    }
+
+    .list-blogs {
+        height: 420px;
+        border-radius: 50px;
+        padding: 0 10px;
+    }
+
+    .container-elements-of-list {
+        gap: 10px;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            display: block;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-button {
+            height: 30px;
+        }
+    }
+
+    .list-element {
+        padding: 15px 35px;
+        border-radius: 40px;
+        margin-right: 8px;
+
+        &__info {
+            @include font(15px, 20px);
+        }
+
+        &__date {
+            @include font(14px);
+            padding-top: 6px;
+        }
+    }
+
+    .page-footer {
+        border-radius: 50px 50px 0 0;
+        flex-flow: column nowrap;
+        box-sizing: border-box;
+        padding: 18px 19px;
+        align-items: start;
+        margin-top: 119px;
+        gap: 20px;
+        @include borders-footer($border-footer-mobile);
+    }
+
+    .footer-headers {
+        @include zero-list-style-inline;
+        gap: 2px;
+        flex-flow: column nowrap;
+
+        &__element {
+            @include font(14px, 20px);
+        }
+    }
+
+    .footer-social {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 8px;
+
+        &__header {
+            text-align: left;
+            @include font(14px, 20px);
+        }
+    }
+
+    .footer-social-list {
+        gap: 8px;
+
+        &__element {
+            background-size: 100%;
+            width: 27px;
+            height: 27px;
+        }
+    }
+}
+
+@keyframes animation-type-three {
+    0% {
+        left: $height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: $height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2;
+    }
+}
+
+@keyframes animation-type-four {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: $height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2;
+    }
+
+    100% {
+        left: 0;
+    }
+}

@@ -1,0 +1,44 @@
+@import 'vars';
+
+@mixin animation-standart {
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@mixin margin-padding-zero {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin font($height, $line-height: $height) {
+    font-size: $height;
+    line-height: $line-height;
+}
+
+@mixin zero-list-style-inline {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+@mixin borders-footer($border-foot) {
+    border-top: $border-foot;
+    border-left: $border-foot;
+    border-right: $border-foot;
+}
+
+@mixin menu-media {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+}
+
+@mixin gradient($position-form, $colorOne, $colorTwo) {
+    background: -moz-radial-gradient($position-form, $colorOne, $colorTwo);
+    background: -webkit-radial-gradient($position-form, $colorOne, $colorTwo);
+    background: -o-radial-gradient($position-form, $colorOne, $colorTwo);
+    background: -ms-radial-gradient($position-form, $colorOne, $colorTwo);
+    background: radial-gradient($position-form, $colorOne, $colorTwo);
+}
