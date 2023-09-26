@@ -270,7 +270,7 @@ body {
         }
 
         &_animation-type-one {
-            top: $height-container-animation - $width-height-coin - $border-weight-animation;
+            top: calc($height-container-animation - $width-height-coin - $border-weight-animation);
             animation-name: animation-type-one;
             @include animation-standart;
         }
@@ -471,7 +471,7 @@ body {
         top: 0;
     }
     50% {
-        top: $height-container-animation - $width-height-coin - $border-weight-animation;
+        top: calc($height-container-animation - $width-height-coin - $border-weight-animation);
     }
 
     100% {
@@ -481,14 +481,14 @@ body {
 
 @keyframes animation-type-two {
     0% {
-        top: $height-container-animation - $width-height-coin - $border-weight-animation;
+        top: calc($height-container-animation - $width-height-coin - $border-weight-animation);
     }
     50% {
         top: 0;
     }
 
     100% {
-        top: $height-container-animation - $width-height-coin - $border-weight-animation;
+        top: calc($height-container-animation - $width-height-coin - $border-weight-animation);
     }
 }
 

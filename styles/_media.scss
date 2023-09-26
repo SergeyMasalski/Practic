@@ -187,7 +187,7 @@
 
             &_animation-type-one {
                 top: 0;
-                left: $height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2;
+                left: calc($height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2);
                 animation: none;
                 @include animation-standart;
                 animation-name: animation-type-three;
@@ -299,7 +299,7 @@
 
 @keyframes animation-type-three {
     0% {
-        left: $height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2;
+        left: calc($height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2);
     }
 
     50% {
@@ -307,7 +307,7 @@
     }
 
     100% {
-        left: $height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2;
+        left: calc($height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2);
     }
 }
 
@@ -317,7 +317,7 @@
     }
 
     50% {
-        left: $height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2;
+        left: calc($height-container-animation / 2 - $width-height-coin / 2 - $border-weight-animation * 2);
     }
 
     100% {

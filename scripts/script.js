@@ -1,3 +1,5 @@
+import '../styles/style.scss';
+
 document.querySelector('.page-header').addEventListener('click', event => {
     const menu = document.querySelector('.language__menu') ? document.querySelector('.language__menu') : document.querySelector('.language__close');
     const iconLanguage = document.querySelector('.page-header__language');
